@@ -1,0 +1,9 @@
+<h1>Nonce</h1>
+
+<p>
+	<% if @success %>
+		<strong>WIN!</strong> (Hit "reload" in your browser to resend the form and produce an error because the nonce is already used!)
+	<% else %>
+		<strong>FAIL!</strong> (You're seeing this because the nonce is not valid anymore!)
+	<% end %>
+</p>

@@ -1,0 +1,15 @@
+<h1>Form Wizard - Step 3 - Complete</h1>
+
+<p>
+	SID: <%= session['sid'] %><br/>
+	FID: <%= @address.fid %>
+</p>
+
+<p>
+	Form Data: <%= session.get_form_data(@address.fid).inspect %>
+</p>
+
+<p>
+	<%= link_to 'Back', wizard_step2_path(:fid => @address.fid) %>
+	<%= link_to 'Homepage', root_url %>
+</p>

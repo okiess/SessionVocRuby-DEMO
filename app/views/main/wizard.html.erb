@@ -1,0 +1,26 @@
+<h1>Form Wizard</h1>
+
+<p>
+	SID: <%= session['sid'] %><br/>
+	FID: <%= @address.fid %>
+</p>
+
+<p>
+	Form Data: <%= session.get_form_data(@address.fid).inspect %>
+</p>
+
+<% form_for(@address, :url => {:controller => 'main', :action => 'wizard_step2'}) do |f| %>
+	<%= f.hidden_field :fid %>
+
+	<p>
+		<label>Firstname</label>
+		<%= f.text_field :firstname %>
+	</p>
+
+	<p>
+		<label>Lastname</label>
+		<%= f.text_field :lastname %>
+	</p>
+
+	<%= f.submit 'Next' %>
+<% end %>

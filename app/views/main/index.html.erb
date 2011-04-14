@@ -1,0 +1,31 @@
+<h1>SessionVOC Testapp</h1>
+
+<p>
+<h2>SID:</h2>
+<%= session['sid'] %>
+</p>
+
+<p>
+<h2>TransData:</h2>
+<%= session["transData"].inspect %>
+</p>
+
+<p>
+<h2>UserData:</h2>
+<%= session["userData"].inspect %>
+</p>
+
+<p>
+<h2>Meta Data (Datainfo):</h2>
+<%= ActionDispatch::Session::SessionvocStore.meta_data.inspect %>
+</p>
+
+<p>
+	<% if logged_in? %>
+		<a href="/logout">Logout</a><br/>
+	<% else %>
+		<a href="/login">Login</a><br/>
+	<% end %>
+	<a href="/wizard">Example Form Wizard</a><br/>
+	<a href="/nonce">Nonce Test</a><br/>
+</p>

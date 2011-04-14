@@ -1,0 +1,21 @@
+<h1>Nonce</h1>
+
+<p>
+	Nonce: <%= @address.nonce %><br/>
+</p>
+
+<% form_for(@address, :url => {:controller => 'main', :action => 'check_nonce'}) do |f| %>
+	<%= f.hidden_field :nonce %>
+
+	<p>
+		<label>Firstname</label>
+		<%= f.text_field :firstname %>
+	</p>
+
+	<p>
+		<label>Lastname</label>
+		<%= f.text_field :lastname %>
+	</p>
+
+	<%= f.submit 'Submit & invalidate this nonce' %>
+<% end %>

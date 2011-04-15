@@ -4,7 +4,7 @@ source 'http://rubygems.org'
 gem 'rails', '3.0.6'
 gem 'httparty'
 gem 'json'
-gem 'sessionvoc-store'
+gem 'sessionvoc-open'
 #################################
 
 gem 'sqlite3'

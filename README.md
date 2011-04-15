@@ -50,7 +50,7 @@ Please make sure that your SessionVOC installation configuration contains the `_
 
 Basic steps to perform within your Rails webapp:
 
- * Add the "sessionvoc-store" gem to your Gemfile
+ * Add the "sessionvoc-open" gem to your Gemfile
  * Create a "sessionvoc.yml" file in your config directory
  * Create a "session_store.rb" file in the "config/initializers" directory and add the following line (please fill in your app name):
 
@@ -63,9 +63,9 @@ Basic steps to perform within your Rails webapp:
 Usage
 -----
 
-Add the "sessionvoc-store" gem to your bundler Gemfile:
+Add the "sessionvoc-open" gem to your bundler Gemfile:
 
-    gem 'sessionvoc-store'
+    gem 'sessionvoc-open'
 
 Run "bundle install" if necessary.
 
